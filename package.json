@@ -10,5 +10,11 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "sabakan21",
-    "license": "WTFPL"
+    "license": "WTFPL",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.55.0",
+        "@typescript-eslint/parser": "^5.55.0",
+        "eslint": "^8.36.0",
+        "ts-node": "^10.9.1"
+    }
 }
