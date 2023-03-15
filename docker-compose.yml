@@ -1,0 +1,22 @@
+version: "3"
+services:
+  voicevox-engine:
+    image: voicevox/voicevox_engine:cpu-ubuntu20.04-latest
+    # image: voicevox/voicevox_engine:nvidia-ubuntu20.04-latest
+    restart: always
+    ports:
+      - "50021:50021"
+    # GPUを利用する場合は deploy を有効にする
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
+  discord_bot:
+    build: .
+    volumes: 
+      - ./:/usr/src/app
+    restart: unless-stopped
+    # depends_on:
+    #   - "voicevox-engine"

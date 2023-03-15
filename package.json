@@ -1,0 +1,14 @@
+{
+    "name": "discord_voicevox_bot",
+    "version": "0.0.0",
+    "description": "",
+    "main": "index.ts",
+    "scripts": {
+        "dev": "nodemon index.ts",
+        "start": "ts-node index.ts",
+        "build": "tsc --build",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "sabakan21",
+    "license": "WTFPL"
+}
